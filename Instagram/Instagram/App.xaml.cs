@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿using Exrin.Abstraction;
+using Exrin.Framework;
+using Instagram.Views;
 using Xamarin.Forms;
 
 namespace Instagram
@@ -13,7 +11,17 @@ namespace Instagram
 		{
 			InitializeComponent();
 
-			MainPage = new Instagram.MainPage();
+			// If you want to set specific platform only options, move this to each native platform project
+			Exrin.Framework.App.Init();
+
+			// Everything is setup, and the MainPage set here
+			Bootstrapper.GetInstance()
+						.Init()
+						.Get<INavigationService>()
+						.Navigate(new StackOptions()
+						{
+							StackChoice = Stacks.App
+						});
 		}
 
 		protected override void OnStart()
