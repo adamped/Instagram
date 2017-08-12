@@ -108,6 +108,63 @@
     <None Include="Instagram.UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\Instagram.Android\Resources\drawable\add.png">
+      <Link>add.png</Link>
+    </Content>
+    <Content Include="..\Instagram.Android\Resources\drawable\bookmark.png">
+      <Link>bookmark.png</Link>
+    </Content>
+    <Content Include="..\Instagram.Android\Resources\drawable\camera.png">
+      <Link>camera.png</Link>
+    </Content>
+    <Content Include="..\Instagram.Android\Resources\drawable\chat.png">
+      <Link>chat.png</Link>
+    </Content>
+    <Content Include="..\Instagram.Android\Resources\drawable\down_arrow.png">
+      <Link>down_arrow.png</Link>
+    </Content>
+    <Content Include="..\Instagram.Android\Resources\drawable\facebook.png">
+      <Link>facebook.png</Link>
+    </Content>
+    <Content Include="..\Instagram.Android\Resources\drawable\heart.png">
+      <Link>heart.png</Link>
+    </Content>
+    <Content Include="..\Instagram.Android\Resources\drawable\heart2.png">
+      <Link>heart2.png</Link>
+    </Content>
+    <Content Include="..\Instagram.Android\Resources\drawable\home.png">
+      <Link>home.png</Link>
+    </Content>
+    <Content Include="..\Instagram.Android\Resources\drawable\InstagramIcon.jpg">
+      <Link>InstagramIcon.jpg</Link>
+    </Content>
+    <Content Include="..\Instagram.Android\Resources\drawable\InstagramLogo.png">
+      <Link>InstagramLogo.png</Link>
+    </Content>
+    <Content Include="..\Instagram.Android\Resources\drawable\latenightseth.jpg">
+      <Link>latenightseth.jpg</Link>
+    </Content>
+    <Content Include="..\Instagram.Android\Resources\drawable\latenightsethfeedimage.jpg">
+      <Link>latenightsethfeedimage.jpg</Link>
+    </Content>
+    <Content Include="..\Instagram.Android\Resources\drawable\nasa.png">
+      <Link>nasa.png</Link>
+    </Content>
+    <Content Include="..\Instagram.Android\Resources\drawable\play.png">
+      <Link>play.png</Link>
+    </Content>
+    <Content Include="..\Instagram.Android\Resources\drawable\search.png">
+      <Link>search.png</Link>
+    </Content>
+    <Content Include="..\Instagram.Android\Resources\drawable\send.png">
+      <Link>send.png</Link>
+    </Content>
+    <Content Include="..\Instagram.Android\Resources\drawable\sent.png">
+      <Link>sent.png</Link>
+    </Content>
+    <Content Include="..\Instagram.Android\Resources\drawable\user.png">
+      <Link>user.png</Link>
+    </Content>
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-100.png" />
     <Content Include="Assets\LockScreenLogo.scale-125.png" />

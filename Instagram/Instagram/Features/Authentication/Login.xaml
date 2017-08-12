@@ -4,7 +4,7 @@
 			 xmlns:local="clr-namespace:Instagram.Proxy"
              x:Class="Instagram.Views.Login">
     <ContentPage.Content>
-		<Grid>
+		<Grid BackgroundColor="White">
 			<Grid.RowDefinitions>
 				<RowDefinition Height="80" />
 				<RowDefinition Height="*" />

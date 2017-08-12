@@ -117,7 +117,13 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Exrin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Exrin.2.0.0-beta2\lib\netstandard1.1\Exrin.dll</HintPath>
+      <HintPath>..\..\packages\Exrin.2.0.1\lib\netstandard1.1\Exrin.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageCircle.Forms.Plugin.Abstractions, Version=1.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugins.Forms.ImageCircle.1.8.1\lib\Xamarin.iOS10\ImageCircle.Forms.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageCircle.Forms.Plugin.iOS, Version=1.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugins.Forms.ImageCircle.1.8.1\lib\Xamarin.iOS10\ImageCircle.Forms.Plugin.iOS.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
@@ -141,6 +147,101 @@
       <Project>{7511b97c-f84d-4fe8-8e99-228d7845c9e4}</Project>
       <Name>Instagram</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\Instagram.Android\Resources\drawable\add.png">
+      <Link>Resources\add.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\Instagram.Android\Resources\drawable\bookmark.png">
+      <Link>Resources\bookmark.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\Instagram.Android\Resources\drawable\camera.png">
+      <Link>Resources\camera.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\Instagram.Android\Resources\drawable\chat.png">
+      <Link>Resources\chat.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\Instagram.Android\Resources\drawable\down_arrow.png">
+      <Link>Resources\down_arrow.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\Instagram.Android\Resources\drawable\facebook.png">
+      <Link>Resources\facebook.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\Instagram.Android\Resources\drawable\heart.png">
+      <Link>Resources\heart.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\Instagram.Android\Resources\drawable\heart2.png">
+      <Link>Resources\heart2.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\Instagram.Android\Resources\drawable\home.png">
+      <Link>Resources\home.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\Instagram.Android\Resources\drawable\InstagramIcon.jpg">
+      <Link>Resources\InstagramIcon.jpg</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\Instagram.Android\Resources\drawable\InstagramLogo.png">
+      <Link>Resources\InstagramLogo.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\Instagram.Android\Resources\drawable\latenightseth.jpg">
+      <Link>Resources\latenightseth.jpg</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\Instagram.Android\Resources\drawable\latenightsethfeedimage.jpg">
+      <Link>Resources\latenightsethfeedimage.jpg</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\Instagram.Android\Resources\drawable\nasa.png">
+      <Link>Resources\nasa.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\Instagram.Android\Resources\drawable\play.png">
+      <Link>Resources\play.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\Instagram.Android\Resources\drawable\search.png">
+      <Link>Resources\search.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\Instagram.Android\Resources\drawable\send.png">
+      <Link>Resources\send.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\Instagram.Android\Resources\drawable\sent.png">
+      <Link>Resources\sent.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\Instagram.Android\Resources\drawable\user.png">
+      <Link>Resources\user.png</Link>
+    </BundleResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.5.256-pre6\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.5.256-pre6\build\netstandard1.0\Xamarin.Forms.targets')" />

@@ -1,11 +1,106 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <local:PageProxy xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+				 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 				 xmlns:local="clr-namespace:Instagram.Proxy"
-             x:Class="Instagram.Views.Feed">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin Forms!" />
-        </StackLayout>
-    </ContentPage.Content>
+				 xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+				 x:Class="Instagram.Views.Feed">
+	<!-- This is a quick mock up. I would normally take repeated XAML, and move them into my own controls, and put styles in the ResourceDictionary -->
+	<ContentPage.Content>
+		<Grid BackgroundColor="White">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="50" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="Auto" />
+			</Grid.RowDefinitions>
+
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto" />
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="Auto" />
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="42" />
+					<RowDefinition Height="2" />
+				</Grid.RowDefinitions>
+				<Image Source="camera.png" WidthRequest="24" Margin="10,0,0,0" />
+				<Image Source="InstagramLogo.png" HorizontalOptions="CenterAndExpand" Grid.Column="1" HeightRequest="40" />
+				<Image Source="send.png" WidthRequest="24" Grid.Column="2" Margin="0,0,10,0" />
+				<Label BackgroundColor="#bababa" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="2" Grid.Row="1" Grid.ColumnSpan="3" />
+			</Grid>
+			<Grid Grid.Row="1" Margin="10,0,0,0">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="70" />
+					<ColumnDefinition Width="70" />
+					<ColumnDefinition Width="70" />
+				</Grid.ColumnDefinitions>
+				<StackLayout VerticalOptions="Center">
+					<controls:CircleImage BorderColor="Red" BorderThickness="1" HeightRequest="50" WidthRequest="50" Source="InstagramIcon.png" HorizontalOptions="Center" />
+					<Label Text="New!" HorizontalOptions="Center" FontSize="12" TextColor="Black" />
+				</StackLayout>
+				<StackLayout VerticalOptions="Center" Grid.Column="1">
+					<controls:CircleImage BorderColor="Red" BorderThickness="1" HeightRequest="50" WidthRequest="50" Source="nasa.png" HorizontalOptions="Center" />
+					<Label Text="nasa" HorizontalOptions="Center" FontSize="12" TextColor="Black" />
+				</StackLayout>
+				<StackLayout VerticalOptions="Center" Grid.Column="2">
+					<controls:CircleImage BorderColor="Red" BorderThickness="1" HeightRequest="50" WidthRequest="50" Source="latenightseth.png" HorizontalOptions="Center" />
+					<Label Text="latenightseth" HorizontalOptions="Center" FontSize="12" TextColor="Black" />
+				</StackLayout>
+
+			</Grid>
+			<ListView Grid.Row="2" ItemsSource="{Binding InstagramFeed}" HasUnevenRows="true">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<Grid>
+								<Grid.RowDefinitions>
+									<RowDefinition Height="70" />
+									<RowDefinition Height="200" />
+									<RowDefinition Height="50" />
+									<RowDefinition Height="20" />
+									<RowDefinition Height="Auto" />
+									<RowDefinition Height="Auto" />
+									<RowDefinition Height="Auto" />
+								</Grid.RowDefinitions>
+								<StackLayout Orientation="Horizontal" Margin="10,0,10,0" Spacing="5">
+									<controls:CircleImage VerticalOptions="Center" HeightRequest="30" WidthRequest="30" Source="latenightseth.png" HorizontalOptions="Center" />
+									<Label Text="latenightseth" VerticalOptions="Center" TextColor="Black" />
+								</StackLayout>
+								<Image Source="{Binding Image}" Grid.Row="1" Aspect="AspectFill" HeightRequest="150" />
+								<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Grid.Row="2" Margin="10,0,10,0">
+									<Image Source="heart2.png" />
+									<Image Source="chat.png" />
+									<Image Source="sent.png" />
+									<Image Source="bookmark.png" HorizontalOptions="EndAndExpand" />
+								</StackLayout>
+								<StackLayout Orientation="Horizontal" Grid.Row="3" Margin="10,0,10,0">
+									<Image Source="play.png" />
+									<Label Text="{Binding ViewCount, StringFormat='{0:N0} views'}" FontSize="12" TextColor="Black" />
+								</StackLayout>
+								<Label Text="{Binding Comment}" Grid.Row="4" TextColor="Black" Margin="10,0,10,0"/>
+								<Label Text="{Binding CommentCount, StringFormat='View All {0} comments'}" Grid.Row="5" Margin="10,0,10,0" />
+								<Label Text="{Binding PostedAt}" Grid.Row="6" Margin="10,0,10,0" />
+							</Grid>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+			<Grid Grid.Row="3" BackgroundColor="#e3e3e3" HeightRequest="50">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="*" />
+				</Grid.ColumnDefinitions>
+				<Image Source="home.png" VerticalOptions="Center" HorizontalOptions="Center" />
+				<Image Source="search.png" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1" Opacity="0.6" />
+				<Image Source="add.png" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="2" Opacity="0.6" />
+				<Image Source="heart.png" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="3" Opacity="0.6" />
+				<Image Source="user.png" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="4" Opacity="0.6" />
+			</Grid>
+
+		</Grid>
+	</ContentPage.Content>
 </local:PageProxy>

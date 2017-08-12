@@ -20,7 +20,7 @@ namespace Instagram
 						.Get<INavigationService>()
 						.Navigate(new StackOptions()
 						{
-							StackChoice = Stacks.Authentication
+							StackChoice = Stacks.Main
 						});
 		}
 
