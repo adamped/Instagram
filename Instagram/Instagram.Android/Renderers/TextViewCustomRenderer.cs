@@ -17,6 +17,7 @@ namespace Instagram.Droid.Renderers
 			{
 				Control.Background = Android.App.Application.Context.GetDrawable(Resource.Drawable.rounded_corners);
 				Control.Gravity = GravityFlags.CenterVertical;
+				Control.SetPadding(10, 0, 0, 0);
 			}
 		}
 
