@@ -5,6 +5,19 @@
 				 xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
 				 x:Class="Instagram.Views.Feed">
 	<!-- This is a quick mock up. I would normally take repeated XAML, and move them into my own controls, and put styles in the ResourceDictionary -->
+	<ContentPage.Padding>
+		<OnPlatform x:TypeArguments="Thickness">
+			<OnPlatform.iOS>
+				0, 20, 0, 0
+			</OnPlatform.iOS>
+			<OnPlatform.Android>
+				0, 0, 0, 0
+			</OnPlatform.Android>
+			<OnPlatform.WinPhone>
+				0, 0, 0, 0
+			</OnPlatform.WinPhone>
+		</OnPlatform>
+	</ContentPage.Padding>
 	<ContentPage.Content>
 		<Grid BackgroundColor="White">
 			<Grid.RowDefinitions>
@@ -36,16 +49,16 @@
 					<ColumnDefinition Width="70" />
 				</Grid.ColumnDefinitions>
 				<StackLayout VerticalOptions="Center">
-					<controls:CircleImage BorderColor="Red" BorderThickness="1" HeightRequest="50" WidthRequest="50" Source="InstagramIcon.png" HorizontalOptions="Center" />
-					<Label Text="New!" HorizontalOptions="Center" FontSize="12" TextColor="Black" />
+					<controls:CircleImage BorderColor="Red" BorderThickness="1" HeightRequest="50" WidthRequest="50" Source="InstagramIcon.jpg" HorizontalOptions="Center" />
+					<Label Text="New!" HorizontalOptions="Center" FontSize="11" TextColor="Black" />
 				</StackLayout>
 				<StackLayout VerticalOptions="Center" Grid.Column="1">
 					<controls:CircleImage BorderColor="Red" BorderThickness="1" HeightRequest="50" WidthRequest="50" Source="nasa.png" HorizontalOptions="Center" />
-					<Label Text="nasa" HorizontalOptions="Center" FontSize="12" TextColor="Black" />
+					<Label Text="nasa" HorizontalOptions="Center" FontSize="11" TextColor="Black" />
 				</StackLayout>
 				<StackLayout VerticalOptions="Center" Grid.Column="2">
-					<controls:CircleImage BorderColor="Red" BorderThickness="1" HeightRequest="50" WidthRequest="50" Source="latenightseth.png" HorizontalOptions="Center" />
-					<Label Text="latenightseth" HorizontalOptions="Center" FontSize="12" TextColor="Black" />
+					<controls:CircleImage BorderColor="Red" BorderThickness="1" HeightRequest="50" WidthRequest="50" Source="latenightseth.jpg" HorizontalOptions="Center" />
+					<Label Text="latenightseth" HorizontalOptions="Center" FontSize="11" TextColor="Black" />
 				</StackLayout>
 
 			</Grid>
@@ -64,7 +77,7 @@
 									<RowDefinition Height="Auto" />
 								</Grid.RowDefinitions>
 								<StackLayout Orientation="Horizontal" Margin="10,0,10,0" Spacing="5">
-									<controls:CircleImage VerticalOptions="Center" HeightRequest="30" WidthRequest="30" Source="latenightseth.png" HorizontalOptions="Center" />
+									<controls:CircleImage VerticalOptions="Center" HeightRequest="30" WidthRequest="30" Source="latenightseth.jpg" HorizontalOptions="Center" />
 									<Label Text="latenightseth" VerticalOptions="Center" TextColor="Black" />
 								</StackLayout>
 								<Image Source="{Binding Image}" Grid.Row="1" Aspect="AspectFill" HeightRequest="150" />

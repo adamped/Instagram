@@ -31,7 +31,7 @@ namespace Instagram.ViewModel
 					ViewCount = 10517,
 					Comment = "latenightseth Enjoy your well-deserved vacation, Mr President. #LNSM",
 					CommentCount = 45,
-					Image = "latenightsethfeedimage.png",
+					Image = "latenightsethfeedimage.jpg",
 					Name = "latenightseth",
 					PostedAt = "1 hour ago"
 				}
