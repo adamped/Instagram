@@ -1,16 +1,19 @@
 ﻿namespace Instagram
-{
-	// These are keys that identify your stacks and views. You can use Enums, or Strings, whatever takes your fancy.
-
+{	
 	public enum Stacks
 	{
-		App
+		Authentication,
+		Main
 	}
 
-	public enum AppViews
+	public enum AuthenticationViews
 	{
-		Main,
-		About
+		Welcome,
+		Login
 	}
 
+	public enum MainViews
+	{
+		Feed
+	}
 }

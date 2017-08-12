@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:PageProxy xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+				 xmlns:local="clr-namespace:Instagram.Proxy"
+             x:Class="Instagram.Views.Welcome">
+	<ContentPage.Content>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="80" />
+				<RowDefinition Height="*" />
+				<RowDefinition Height="50" />
+			</Grid.RowDefinitions>
+			<StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,10,0,0">
+				<Label Text="English (United States)" />
+				<Image Source="down_arrow.png" Opacity="0.6" VerticalOptions="Start" Margin="0,3,0,0" />
+			</StackLayout>
+			<Grid Grid.Row="1">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*" />
+					<RowDefinition Height="*" />
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+				</Grid.RowDefinitions>
+				<Image Source="InstagramLogo.png" HeightRequest="70" VerticalOptions="End" />
+				<Button Margin="10,0,10,0" Command="{Binding LoginCommand}" Text="Sign up with email or phone number" BackgroundColor="#3897F0" TextColor="White" HeightRequest="50" VerticalOptions="Start" Grid.Row="2" />
+			</Grid>
+			<StackLayout Grid.Row="2" BackgroundColor="#FFFFFF">
+				<Label HeightRequest="1" BackgroundColor="#E3E3E3" />
+				<Label Text="Already have an account? Log in." VerticalOptions="FillAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+			</StackLayout>			
+		</Grid>
+	</ContentPage.Content>
+</local:PageProxy>
