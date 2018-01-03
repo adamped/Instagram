@@ -12,7 +12,7 @@ namespace Instagram
 	public class AuthenticationStack : BaseStack
 	{
 		public AuthenticationStack(IViewService viewService)
-            : base(new NavigationProxy(), viewService, Stacks.Authentication, nameof(AuthenticationViews.Welcome))
+            : base(new NavigationProxy(), viewService, Stacks.Authentication, nameof(AuthenticationViews.Login))
         {
 			ShowNavigationBar = false;
 		}

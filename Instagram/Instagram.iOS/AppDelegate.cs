@@ -27,6 +27,9 @@ namespace Instagram.iOS
 			ImageCircleRenderer.Init();
 			LoadApplication(new App());
 
+
+            UINavigationBar.Appearance.BackgroundColor = UIColor.Black;
+
 			return base.FinishedLaunching(app, options);
 		}
 	}

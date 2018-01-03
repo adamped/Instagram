@@ -20,8 +20,11 @@ namespace Instagram
 						.Get<INavigationService>()
 						.Navigate(new StackOptions()
 						{
-							StackChoice = Stacks.Main
+							StackChoice = Stacks.Authentication
 						});
+
+			
+
 		}
 
 		protected override void OnStart()
